@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Личный кабинет{% endblock %}
+
+{% block extra_css %}
+<style>
+    .profile-container { max-width: 800px; margin: 50px auto; display: flex; gap: 30px; }
+    .profile-card { background: white; padding: 30px; border-radius: 20px; border: 1px solid #ffe3e7; box-shadow: 0 10px 25px rgba(255, 182, 193, 0.15); width: 300px; text-align: center; }
+    .avatar { width: 100px; height: 100px; background-color: #ffeef0; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 40px; color: #ff6b8b; }
+    .stats-panel { background: white; padding: 30px; border-radius: 20px; border: 1px solid #ffe3e7; box-shadow: 0 10px 25px rgba(255, 182, 193, 0.15); flex-grow: 1; }
+    .stats-panel h2 { color: #ff4d73; margin-bottom: 25px; }
+    .stat-item { padding: 15px 0; border-bottom: 1px solid #ffe3e7; display: flex; justify-content: space-between; }
+    .stat-item:last-child { border: none; }
+    .val { font-weight: bold; color: #ff6b8b; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="profile-container">
+    <div class="profile-card">
+        <div class="avatar">👤</div>
+        <h3>Минчанин-Волонтер</h3>
+        <p style="color: #999; font-size: 14px; margin-top: 5px;">Статус: Благотворитель</p>
+    </div>
+    <div class="stats-panel">
+        <h2>Ваш вклад в проект</h2>
+        <div class="stat-item">
+            <span>Курируемые боксы</span>
+            <span class="val">2 точки</span>
+        </div>
+        <div class="stat-item">
+            <span>Оплачено порций корма</span>
+            <span class="val">14 порций</span>
+        </div>
+        <div class="stat-item">
+            <span>Спасенные питомцы</span>
+            <span class="val">3 хвостика</span>
+        </div>
+    </div>
+</div>
+{% endblock %}

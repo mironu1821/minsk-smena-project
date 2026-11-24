@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}О проекте{% endblock %}
+
+{% block extra_css %}
+<style>
+    .content { max-width: 800px; margin: 50px auto; background: white; padding: 40px; border-radius: 20px; border: 1px solid #ffe3e7; box-shadow: 0 10px 25px rgba(255, 182, 193, 0.15); line-height: 1.8; }
+    .content h1 { color: #ff4d73; margin-bottom: 20px; font-size: 32px; }
+    .content h3 { color: #ff6b8b; margin-top: 25px; margin-bottom: 10px; }
+    .content p { margin-bottom: 15px; color: #555; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <h1>О проекте «Шанс на выживание»</h1>
+    <p>Наш проект разработан в рамках городской программы «Минская смена». Мы стремимся решить проблему выживания безнадзорных животных в агрессивных городских условиях зимнего и осеннего периодов.</p>
+    <h3>Наша миссия</h3>
+    <p>Создание цивилизованной инфраструктуры взаимодействия жителей Минска и уличных животных с использованием доступных IoT-технологий и концепции Smart City.</p>
+    <h3>Авторы разработки</h3>
+    <p>Команда новаторов и зоозащитников: Носко Яна (Аналитика), Телешевская Дарья (Инженерия), Кишко Маргарита (Финансы и PR).</p>
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Питомцы{% endblock %}
+
+{% block extra_css %}
+<style>
+    .title { text-align: center; color: #ff4d73; margin: 40px 0 20px; }
+    .card-container { max-width: 1200px; margin: 0 auto; display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; padding: 20px; }
+    .animal-card { background: white; border-radius: 15px; border: 1px solid #ffe3e7; box-shadow: 0 8px 20px rgba(255, 182, 193, 0.15); width: 280px; overflow: hidden; text-align: center; }
+    .photo-placeholder { width: 100%; height: 180px; background-color: #ffeef0; display: flex; align-items: center; justify-content: center; font-size: 50px; color: #ff6b8b; }
+    .card-body { padding: 20px; }
+    .card-body h3 { color: #333; margin-bottom: 5px; }
+    .tag { display: inline-block; background-color: #ffe3e7; color: #ff4d73; font-size: 12px; padding: 3px 10px; border-radius: 10px; font-weight: bold; margin-bottom: 12px; }
+    .card-body p { font-size: 14px; color: #777; margin-bottom: 15px; line-height: 1.4; }
+    .btn-card { display: block; background-color: #ff6b8b; color: white; padding: 10px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 14px; }
+    .btn-card:hover { background-color: #ff4d73; }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1 class="title">Ищут постоянный дом</h1>
+<div class="card-container">
+    <div class="animal-card">
+        <div class="photo-placeholder">🐱</div>
+        <div class="card-body">
+            <span class="tag">Бокс №1 (Малиновка)</span>
+            <h3>Мурзик</h3>
+            <p>Возраст около 1 года. Очень ласковый кот, часто заходит погреться в модуль.</p>
+            <a href="{% url 'pages:profile' %}" class="btn-card">Забрать домой</a>
+        </div>
+    </div>
+    <div class="animal-card">
+        <div class="photo-placeholder">🐶</div>
+        <div class="card-body">
+            <span class="tag">Бокс №3 (Уручье)</span>
+            <h3>Ральф</h3>
+            <p>Спокойный и дружелюбный пес. Ждет ответственного и доброго хозяина.</p>
+            <a href="{% url 'pages:profile' %}" class="btn-card">Забрать домой</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная — Шанс на выживание{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Стиль для прилипающей шапки (если нужен только на главной) */
+    header { position: sticky; top: 0; z-index: 1000; }
+    
+    .hero { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 100px 20px; background: linear-gradient(135deg, #ffffff 0%, #ffe3e7 100%); }
+    .hero h1 { font-size: 48px; color: #ff4d73; margin-bottom: 20px; }
+    .hero p { font-size: 18px; color: #777; margin-bottom: 40px; max-width: 600px; line-height: 1.6; }
+    .btn { background-color: #ff6b8b; color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: background-color 0.3s, transform 0.2s; box-shadow: 0 4px 15px rgba(255, 107, 139, 0.4); }
+    .btn:hover { background-color: #ff4d73; transform: translateY(-2px); }
+    .features { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; padding: 60px 20px; }
+    .feature-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 20px rgba(255, 182, 193, 0.15); width: 280px; text-align: center; border: 1px solid #ffe3e7; }
+    .feature-card h3 { color: #ff6b8b; margin-bottom: 15px; }
+    .feature-card p { color: #888; font-size: 14px; line-height: 1.5; }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Шанс на выживание</h1>
+    <p>Интерактивная городская экосистема заботы о бездомных животных в Минске. Помогайте автоматизированным боксам-термосам в один клик.</p>
+    <a href="{% url 'pages:map' %}" class="btn">Найти ближайший бокс</a>
+</section>
+
+<section class="features">
+    <div class="feature-card">
+        <h3>Умные боксы</h3>
+        <p>Уникальные уличные модули, сохраняющие тепло и защищающие животных в любые морозы.</p>
+    </div>
+    <div class="feature-card">
+        <h3>Онлайн-контроль</h3>
+        <p>Датчики веса еды и камеры транслируют состояние каждого бокса прямо в приложение.</p>
+    </div>
+    <div class="feature-card">
+        <h3>Быстрая помощь</h3>
+        <p>Каждый житель города может мгновенно оплатить порцию корма для выбранной точки.</p>
+    </div>
+</section>
+{% endblock %}

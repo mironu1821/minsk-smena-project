@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Карта боксов — Шанс{% endblock %}
+
+{% block extra_css %}
+<style>
+    .map-container { display: flex; max-width: 1200px; margin: 30px auto; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 25px rgba(255, 182, 193, 0.2); border: 1px solid #ffe3e7; height: 600px; }
+    .sidebar { width: 350px; padding: 30px; overflow-y: auto; border-right: 1px solid #ffe3e7; }
+    .sidebar h2 { color: #ff4d73; margin-bottom: 20px; }
+    .map-mock { flex-grow: 1; background-color: #ffeef0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; color: #ff6b8b; }
+    .point-item { padding: 15px; border-radius: 10px; background-color: #fffbfb; border: 1px solid #ffe3e7; margin-bottom: 15px; cursor: pointer; transition: 0.3s; }
+    .point-item:hover { border-color: #ff6b8b; background-color: #ffeef0; }
+    .status-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; }
+    .status-green { background-color: #2ecc71; }
+    .status-red { background-color: #e74c3c; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="map-container">
+    <div class="sidebar">
+        <h2>Точки в Минске</h2>
+        <div class="point-item">
+            <h4><span class="status-dot status-green"></span>Модуль №1</h4>
+            <p style="font-size: 13px; color: #888; margin-top: 5px;">ул. Притыцкого, ст.м. Малиновка</p>
+        </div>
+        <div class="point-item">
+            <h4><span class="status-dot status-red"></span>Модуль №2</h4>
+            <p style="font-size: 13px; color: #888; margin-top: 5px;">ул. Лобанка, Каменная Горка</p>
+        </div>
+        <div class="point-item">
+            <h4><span class="status-dot status-green"></span>Модуль №3</h4>
+            <p style="font-size: 13px; color: #888; margin-top: 5px;">пр-т Независимости, Уручье</p>
+        </div>
+    </div>
+    <div class="map-mock">
+        <h2 style="font-size: 36px; margin-bottom: 10px;">🗺️ Карта API</h2>
+        <p style="color: #aa888f;">Интерактивная подложка карты города Минска загружается здесь.</p>
+    </div>
+</div>
+{% endblock %}

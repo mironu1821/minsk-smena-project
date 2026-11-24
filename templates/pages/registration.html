@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Регистрация в системе{% endblock %}
+
+{% block extra_css %}
+<style>
+    .auth-container { max-width: 450px; margin: 60px auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 25px rgba(255, 182, 193, 0.2); border: 1px solid #ffe3e7; }
+    .auth-container h2 { color: #ff4d73; text-align: center; margin-bottom: 30px; }
+    .form-group { margin-bottom: 20px; }
+    label { display: block; margin-bottom: 8px; color: #666; font-weight: 500; }
+    input { width: 100%; padding: 12px; border: 1px solid #ffe3e7; border-radius: 10px; background-color: #fffbfb; outline: none; font-size: 16px; }
+    input:focus { border-color: #ff6b8b; box-shadow: 0 0 5px rgba(255, 107, 139, 0.2); }
+    .btn-auth { display: block; width: 100%; background-color: #ff6b8b; color: white; padding: 14px; border: none; border-radius: 25px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px; transition: background-color 0.3s; }
+    .btn-auth:hover { background-color: #ff4d73; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <h2>Регистрация волонтера</h2>
+    <form action="#">
+        <div class="form-group">
+            <label>Имя Фамилия</label>
+            <input type="text" placeholder="Введите ваше имя" required>
+        </div>
+        <div class="form-group">
+            <label>Электронная почта</label>
+            <input type="email" placeholder="example@mail.ru" required>
+        </div>
+        <div class="form-group">
+            <label>Пароль</label>
+            <input type="password" placeholder="Придумайте надежный пароль" required>
+        </div>
+        <button type="submit" class="btn-auth">Создать аккаунт</button>
+    </form>
+</div>
+{% endblock %}

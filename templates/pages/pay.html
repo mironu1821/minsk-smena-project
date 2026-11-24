@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Поддержать проект{% endblock %}
+
+{% block extra_css %}
+<style>
+    .pay-container { max-width: 500px; margin: 60px auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 25px rgba(255, 182, 193, 0.2); border: 1px solid #ffe3e7; text-align: center; }
+    .pay-container h2 { color: #ff4d73; margin-bottom: 20px; }
+    .pay-container p { color: #777; margin-bottom: 30px; }
+    .form-group { text-align: left; margin-bottom: 20px; }
+    label { display: block; margin-bottom: 8px; color: #666; font-weight: 500; }
+    input { width: 100%; padding: 12px; border: 1px solid #ffe3e7; border-radius: 10px; background-color: #fffbfb; outline: none; font-size: 16px; }
+    input:focus { border-color: #ff6b8b; box-shadow: 0 0 5px rgba(255, 107, 139, 0.2); }
+    .btn-pay { display: block; width: 100%; background-color: #ff6b8b; color: white; padding: 14px; border: none; border-radius: 25px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background-color 0.3s; margin-top: 20px; }
+    .btn-pay:hover { background-color: #ff4d73; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="pay-container">
+    <h2>Пополнение баланса бокса</h2>
+    <p>Ваше пожертвование моментально конвертируется в порцию свежего корма.</p>
+    <form action="#">
+        <div class="form-group">
+            <label>Номер бокса или адрес</label>
+            <input type="text" placeholder="Например: Бокс №3, Фрунзенский р-н" required>
+        </div>
+        <div class="form-group">
+            <label>Сумма пожертвования (BYN)</label>
+            <input type="number" min="1" placeholder="Введите сумму" required>
+        </div>
+        <div class="form-group">
+            <label>Данные карты</label>
+            <input type="text" placeholder="0000 0000 0000 0000" required>
+        </div>
+        <button type="submit" class="btn-pay">Оплатить корм</button>
+    </form>
+</div>
+{% endblock %}
